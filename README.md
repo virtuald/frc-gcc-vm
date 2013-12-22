@@ -7,13 +7,16 @@ This has been tested on OSX, but it should run equally well on Linux and on
 Windows platforms. File a bug report if you find this to not be the case.
 
 Pre-deploy setup steps
-==========================
+======================
 
 Host software requirements
 --------------------------
 
 1. Install Virtualbox 4.2.16 or greater
-2. Install Vagrant 1.4 or greater [http://www.vagrantup.com]
+   * Any newish version will work, but there are vagrant incompatibility
+     issues with older versions of virtualbox, so stay newer
+2. Install Vagrant [http://www.vagrantup.com]
+   * Version 1.2 or greater should work, but definitely get at least 1.3.5
 3. You need to install the correct vagrant plugins:
        
        $ vagrant plugin install vagrant-berkshelf 
