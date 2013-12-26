@@ -1,7 +1,8 @@
 frc-gcc-vm
 ==========
 
-This is a vagrant-based VM
+This is a vagrant-based VM that allows you to install the FRC GCC 4.8 build
+packages so you can build executables for the FRC cRIO platform.
 
 This has been tested on OSX, but it should run equally well on Linux and on
 Windows platforms. File a bug report if you find this to not be the case.
@@ -11,6 +12,11 @@ Pre-deploy setup steps
 
 Host software requirements
 --------------------------
+
+The VM guest is a 64-bit host, as the GCC deb files only are 64-bit builds.
+You may be able to run 64-bit guests on a 32-bit host, but there are
+specific requirements that virtualbox has, and some problems have been
+reported in that configuration. Search the internet for more details.
 
 1. Install Virtualbox 4.2.16 or greater
    * Any newish version will work, but there are vagrant incompatibility
@@ -52,8 +58,9 @@ you should set the paths to values that make sense for you.
 Start the VM
 ============
 
-Open up a command prompt and run the following command:
+Open up a command prompt/terminal and run the following commands.
 
+	$ cd <this directory>
     $ vagrant up
     
 If all is well, a bunch of stuff will happen and you'll have a VM that will
